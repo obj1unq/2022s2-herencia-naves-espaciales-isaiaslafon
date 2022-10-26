@@ -25,6 +25,11 @@ describe "Nave de carga" {
 		naveLlena.recibirAmenaza()
 		assert.equals(0, naveVacia.carga())
 	}
+	
+//	test "propulsar" {
+//		naveVacia.propulsar()
+//		assert.equals(20000, naveVacia.velocidad())
+//	}
 
 }
 
@@ -53,6 +58,22 @@ describe "Nave de pasajeros" {
 		naveSinPasajeros.recibirAmenaza()
 		assert.that(naveSinPasajeros.alarma())
 	}
+	
+//	test "propulsar" {
+//		naveConPasajeros.propulsar()
+//		assert.equals(300000, naveConPasajeros.velocidad())
+//	}
+//	
+//	test "preparar" {
+//		naveConPasajeros.preparar()
+//		assert.equals(300000, naveConPasajeros.velocidad())		
+//	}
+//	
+//	test "encontrar enemigo" {
+//		naveSinPasajeros.encontrarEnemigo()
+//		assert.equals(20000, naveSinPasajeros.velocidad())
+//		assert.that(naveSinPasajeros.alarma())
+//	}
 
 }
 
@@ -90,5 +111,64 @@ describe "Nave de combate" {
 		assert.that(naveEnAtaque.armasDesplegadas())
 		
 	}
+	
+//	test "preparar en reposo" {
+//		naveEnReposo.preparar()
+//		assert.equals(15000, naveEnReposo.velocidad())
+//		assert.equals("Saliendo en misión", naveEnReposo.ultimoMensaje())
+//		assert.equals(ataque, naveEnReposo.modo())
+//	}
+//	
+//	test "preparar en ataque" {
+//		naveEnAtaque.preparar()
+//		assert.equals(15000, naveEnAtaque.velocidad())
+//		assert.equals("Volviendo a la base", naveEnAtaque.ultimoMensaje())
+//	}
+	 
 }
+
+/*
+describe "Nave de residuos radioactivos" {
+
+	const naveVacia = new NaveDeResiduosRadiactivos()
+	const naveLlena = new NaveDeResiduosRadiactivos(carga = 500000, velocidad = 290000)
+
+//	test "sobrecargada" {
+//		assert.that(naveLlena.sobrecargada())
+//	}
+//
+//	test "no sobrecargada" {
+//		assert.notThat(naveVacia.sobrecargada())
+//	}
+//
+//	test "excedida de velocidad" {
+//		assert.that(naveLlena.excedidaDeVelocidad())
+//	}
+//
+//	test "no excedida de velocidad" {
+//		assert.notThat(naveVacia.excedidaDeVelocidad())
+//	}
+//
+//	test "recibir amenaza" {
+//		naveLlena.recibirAmenaza()
+//		assert.equals(500000, naveLlena.carga())
+//		assert.equals(0, naveLlena.velocidad())
+//		assert.that(naveLlena.sellado())
+//	}
+//	
+//	test "propulsar" {
+//		naveVacia.propulsar()
+//		assert.equals(20000, naveVacia.velocidad())
+//	}
+//	
+//	test "preparar" {
+//		naveVacia.preparar()
+//		assert.equals(0, naveVacia.carga())
+//		assert.equals(15000, naveVacia.velocidad())
+//		assert.that(naveVacia.sellado())
+//	}
+
+}
+*/
+
 

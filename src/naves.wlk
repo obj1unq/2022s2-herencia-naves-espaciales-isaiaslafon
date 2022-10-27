@@ -13,12 +13,14 @@ class Nave{
 		self.acelerar(15000)
 	}
 	
-	method encontrarEnemigo() {
-		self.recibirAmenaza()
-		self.propulsar()
+	//Template Method, las subclases se encargan de ser necesario solo de B y C
+	method encontrarEnemigo() { //A
+		self.recibirAmenaza() //B
+		self.propulsar() //C
 	}
 	
-	method recibirAmenaza()
+	method recibirAmenaza() //Método abstracto, se debe definir con override en sus subclases 
+							//si queda abstracto en las mismas no se puede instanciar (clase abstracta)
 
 }
 

@@ -52,7 +52,7 @@ class NaveDeResiduosRadiactivos inherits NaveDeCarga{
 
 	override method recibirAmenaza() {
 		self.sellar()
-		//velocidad = 0
+		//velocidad = 0 //Ya lo realiza sellar().
 	}
 	
 	override method preparar(){
